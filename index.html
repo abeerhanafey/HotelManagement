@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandNileHotel</title>
+    <!-- animation library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Jersey+15&display=swap"&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- axios cdn  -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- styling css  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="mainPage">
+        <!-- start header section  -->
+        <section class="header">
+            <!-- start navbar  -->
+            <div class="navbar" >
+                <div class="logo">
+                    <img src="./img/logo2.png" alt="logoImg">
+                    <h1>Grand Hotel</h1>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#aboutSection">About </a></li>
+                        <li><a href="./html/roomPage.html">Rooms</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="sign">
+                    <a class="signIn" href="./html/loginPage.html">Login</a>
+                    <a class="signUp" href="./html/registerPage.html">Sign Up</a>
+                </div>
+            </div>
+            <!-- end navbar  -->
+            <!-- start banner  -->
+            <div class="banner"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h2>Explore Our Exquisite Hotel</h2>
+                <p>Whether you are travelling for business or pleasure, the luxury hotel services offered by our hotel make it an ideal choice for your stay in Cairo, Egypt.</p>
+            </div>
+            <!-- end banner  -->
+            <!-- start checkInOut  -->
+            <div class="checkInOut"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div style="width: 17%;" class="checkIn">
+                    <h3>Check In</h3>
+                    <input class="dateInput" type="date" id="myDate1" min=""/>
+                </div>
+                <div style="width: 17%;" class="checkOut">
+                    <h3>Check Out</h3>
+                    <input class="dateInput" type="date" id="myDate2" min="" />
+                </div>
+                <div style="width: 27%; " class="guests">
+                    <h3>Guests Number</h3>
+                    <div class="guestsNum">
+                        <pre class="A">  ADULTS    <span>1</span></pre>
+                        <pre class="C">  CHILDREN   <span>1</span></pre>
+                    </div>
+                    <div class="timer" style="display: block;">
+                        <div class="one">
+                            <span>ADULTS</span>
+                        <span>
+                            <span id="minusAdult">-</span>
+                            <span id="numAdult">1</span>
+                            <span id="plusAdult">+</span>
+                        </span>
+                        </div>
+                        <hr style="margin: 10px 0;">
+                        <div class="two">
+                            <span>CHILD</span>
+                        <span>
+                            <span id="minusChild">-</span>
+                            <span id="numChild">1</span>
+                            <span id="plusChild">+</span>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 20%;" class="roomType">
+                    <h3>Room Type</h3>
+                    <select name="roomType" id="typeRoom">
+                        <option value="Family Room" selected>Family Room</option>
+                        <option value="Executive Room">Executive Room</option>
+                        <option value="Suites">Suites</option>
+                        <option value="Specialty Rooms">Specialty Rooms</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Standard Room">Standard Room</option>
+                    </select>
+                </div>
+                <div style="width: 17%;" class="search">
+                    <a href="#">SEARCH ROOM</a>
+                </div>
+            </div>
+            <!-- start checkInOut  -->
+        </section>
+        <!-- end header section  -->
+        <!-- start top features section  -->
+        <section class="topFeatures">
+            <div class="top">
+                <hr class="line">
+                <p>features</p>
+            </div>
+            <h2 class="h1_top">Hotel Facilities.</h2>
+            <p class="par">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>      
+            <div class="cards">
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/Group-40.png" alt="..">
+                        <p>Parking</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/safe.jpg" alt="..">
+                        <p>Safe</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/swimmingPool.jpg" alt="..">
+                        <p>Swimming Pool</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/fruit.jpg" alt="..">
+                        <p>Spa</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/gym.jpg" alt="..">
+                        <p>Gym</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/wifi1.jpg" alt="..">
+                        <p>Free Wifi</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/brackFast.jpg" alt="..">
+                        <p>Breakfast</p>
+                    </div>
+                    <div class="card" data-aos="zoom-in">
+                        <img src="./img/icons/workspace.jpg" alt="..">
+                        <p>Workspace</p>
+                    </div>
+            </div>
+        </section>
+        <!-- end top features section  -->
+        <!-- start about section  -->
+        <section id="aboutSection" class="about">    
+                    <div class="top">
+                        <hr class="line">
+                        <p>about us</p>
+                    </div>
+                    <div class="bottom_about">
+                        <div class="imgDiv" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                            <div class="back"></div>
+                            <img src="img/about-2-right.jpg" alt="">
+                        </div>
+                        <div class="right_about" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1500">
+                            <h2>We Provide Best Place To Enjoy Your Time</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam obcaecati libero saepe a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, exercitationem!</p>              
+                            <a href="./html/views.html">Discover More</a>
+                        </div>
+                    </div>                  
+        </section>        
+        <!-- end about section  -->
+        <!-- start funny section  -->
+        <section class="funSection">
+            <div class="container">
+                <div class="fun" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500">
+                    <i class="fa-solid fa-face-grin-wide"></i>
+                    <h3>30</h3>
+                    <p>+Happy Client</p>
+                </div>
+                <div class="fun" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>500</h3>
+                    <p>+Our Staff</p>
+                </div>
+                <div class="fun" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3>1000</h3>
+                    <p>+Cup Of Coffee</p>
+                </div>
+                <div class="fun" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1500">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>40</h3>
+                    <p>+Win Award</p>
+                </div>
+            </div>
+        </section>
+        <!-- end funny section  -->
+        <!-- start room types section  -->
+        <section class="allRoomType">
+            <div class="above_card">
+                <h3 data-aos="fade-up-right" data-aos-delay="100" data-aos-duration="1500">Step into a room & suits that blurs the lines between dreams and realit</h3>  
+                <p class="par" data-aos="zoom-in-down" data-aos-delay="1500" data-aos-duration="1500">A wonderland of color, glamour, and comfort that expands the imagination and cradles the spirit.</p>
+            </div>
+            <div class="roomCards">
+                
+            </div>
+        </section> 
+        <!-- end room types section  -->
+        <!-- start our client says  -->
+        <section class="sec_5">
+            <div class="container_sec5" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+                <div class="above_card">
+                    <hr class="line1">
+                    <h3>what our client are saying</h3>
+                </div>
+                <div class="container_card">      
+                    <div class="card">
+                        <div class="top_img">
+                            <img src="./img/icons/customer-feedback.png">
+                        </div>
+                        <div class="info">
+                            <h3>pyan campbell</h3>
+                            <p>The staff was very helpful and accommodating. The family room was large, comfortable and clean.The location made travel around Cairo very easy and affordable.</p>
+                        </div>
+                        <div class="bottom_img">
+                            <img src="./img/icons/rating.png">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="top_img">
+                            <img src="./img/icons/customer-feedback.png">
+                        </div>
+                        <div class="info">
+                            <h3>pyan campbell</h3>
+                            <p>We had a lovely stay! Our room was comfy, clean and we had service every day. The receptionist team was very friendly and professional. The breakfast and service was nice and fast.</p>
+                </div>
+                        <div class="bottom_img">
+                            <img src="./img/icons/rating (1).png">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="top_img">
+                            <img src="./img/icons/customer-feedback.png">
+                        </div>
+                        <div class="info">
+                            <h3>pyan campbell</h3>
+                            <p>The hotel was good and their service was good. Everything was upto the mark, only issue was with Wi-Fi, for which the room was to be changed, but it was resolved. It was a pleasant stay.</p>
+                        </div>
+                        <div class="bottom_img">
+                            <img src="./img/icons/rating.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="container_circle">
+                    <div class="circle c1"> </div>
+                    <div class="circle"> </div>
+                    <div class="circle"> </div>
+                    <div class="circle"> </div>
+                    <div class="circle"> </div>
+                </div>
+                <hr class="line1">
+            </div>
+        </section> 
+        <!-- end our client says  -->
+        <!-- start our hotel team  -->
+        <section class="hotelTeam">
+            <h1 data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="1500">Our Team</h1>
+            <div class="team">
+                <div class="container" data-aos="flip-left">
+                    <img class="left_img" src="img/download (2).jpg" alt="...">
+                    <div class="contain_info_icon">
+                        <div class="info">
+                            <h2> MR/ ............</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ex!</p>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-aos="flip-left">
+                    <img class="left_img" src="img/download (3).jpg" alt="...">
+                    <div class="contain_info_icon">
+                        <div class="info">
+                            <h2> MRS/ .........</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ex!</p>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-aos="flip-left">
+                    <img class="left_img" src="img/man.jpg" alt="...">
+                    <div class="contain_info_icon">
+                        <div class="info">
+                            <h2> MR/ ............</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ex!</p>
+                        </div>
+                        <div class="icon">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end our hotel team  -->
+        <!-- start footer section  -->
+        <section class="footer">
+            <div class="topInfo">
+                <div class="one">
+                    <h2>HOTALE</h2>
+                    <div class="cont">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <div class="payment">
+                        <img src="./img/payment.png" alt="notFound">
+                    </div>
+                </div>
+                <div class="two">
+                    <h2>CONTACT</h2>
+                    <ul>
+                        <li>T: 1-634-567-34</li>
+                        <li>E: Book@Hotel.co</li>
+                        <li>F: 1-634-567-35</li>
+                    </ul>
+                </div>
+                <div class="three">
+                    <h2>HOTEL ADDRESS</h2>
+                    <ul>
+                        <li>Hotale Av.</li>
+                        <li>del Ejercito, 2, 1900</li>
+                        <li>Madrid, Spain</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomInfo">
+                <div class="left">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT</li>
+                        <li>PRIVACY POLICY</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Copyright <span>©</span> 2024 GoodLayers. <u>All Rights Reserved</u>.</p>
+                </div>
+            </div>
+        </section>
+        <!-- end footer section  -->
+        
+    </section>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    
+</body>
+</html>

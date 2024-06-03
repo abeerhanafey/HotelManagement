@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roomPage</title>
+    <!-- animation library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Jersey+15&display=swap"&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- axios cdn  -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- styling css  -->
+    <link rel="stylesheet" href="../css/roomStyle.css">
+</head>
+<body>
+    <section class="mainPage">
+        <!-- start header section -->
+        <div class="header">
+            <!-- start navbar  -->
+            <div class="navbar" >
+                <div class="logo">
+                    <img src="../img/logo2.png" alt="logoImg">
+                    <h1>Grand Hotel</h1>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">About </a></li>
+                        <li class="active"><a href="roomPage.html">Rooms</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="sign">
+                    <a class="signIn" href="#">Sign In</a>
+                    <a class="signUp" href="#">Sign Up</a>
+                </div>
+            </div>
+            <!-- end navbar  -->
+        </div>
+        <!-- end header section -->
+
+        <!-- start our featured suite  -->
+        <div class="featuredSuite">
+            <div data-aos="zoom-in" class="img">
+                <img src="../img/roomImg/featured.jpg" alt="notFound">
+            </div>
+            <div data-aos="zoom-in-up" class="aboutImg">
+                <h2>FEATURED SUITE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium doloribus voluptatum? Impedit nam quaerat cum iure ea necessitatibus dolores.</p>
+                <div class="offer">
+                    <span>
+                        <h3>start from</h3>
+                        <h3>200$</h3>
+                    </span>
+                    <span>
+                        <h3>discount</h3>
+                        <h3>20%</h3>
+                    </span>
+                </div>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <!-- end our featured suite  -->
+
+        <!-- start rooms section -->
+        <div class="roomsSection">
+            <h2>ROOMS</h2>
+            <div class="line">
+                <div class="line1"></div>
+                <div class="square"></div>
+                <div class="line2"></div>
+            </div>
+            <div class="roomsCategory">
+                <ul>
+                    <li onclick="viewAllRoomsInRoomPage(0)"><a href="#">All</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(1)"><a href="#">Standard</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(2)"><a href="#">Deluxe</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(3)"><a href="#">Suite</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(5)"><a href="#">Executive</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(7)"><a href="#">Specialty</a></li>
+                    <li onclick="viewAllRoomsInRoomPage(6)"><a href="#">Family</a></li>
+                </ul>
+            </div>
+            <div class="rooms">
+                <!-- get rooms from api as categorey  -->
+            </div>
+            <div class="more">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                <span class="four"></span>
+                <span class="five"></span>
+            </div>
+        </div>
+        <!-- end rooms section -->
+        <!-- start suites section -->
+        <!-- <section class="roomsSection">
+            <h2>SUITES</h2>
+            <div class="line">
+                <div class="line1"></div>
+                <div class="square"></div>
+                <div class="line2"></div>
+            </div>
+            <div class="roomsCategory">
+                <ul style="justify-content: flex-start;">
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Junior</a></li>
+                    <li><a href="#">Tower</a></li>
+                    <li><a href="#">Terrace</a></li>
+                    <li><a href="#">Sterling</a></li>
+                </ul>
+            </div>
+            <div class="rooms">
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+                <div class="room">
+                        <img src="../img/roomImg/suit2.jpg" alt="notFound">
+                        <h2>Classic Room</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nostrum fugiat possimus sequi, eos quasi</p>
+                        <div class="fetures">
+                            <div class="top">
+                                <span><i></i> 1 Queen Bed</span>
+                                <span><i></i> 2 Guests</span>
+                            </div>
+                            <div class="buttom">
+
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>Starting From </span>
+                            <span>$100 / night</span>
+                        </div>
+                        <div class="booking">
+                            <button class="book">Book Now</button>
+                            <button class="details">View Details</button>
+                        </div>
+                </div>
+            </div>
+            <div class="more">
+                <span>Load More </span>
+            </div>
+        </section> -->
+        <!-- end suites section -->
+        <!-- start footer section  -->
+        <section class="footer">
+            <div class="topInfo">
+                <div class="one">
+                    <h2>HOTALE</h2>
+                    <div class="cont">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <div class="payment">
+                        <img src="../img/payment.png" alt="notFound">
+                    </div>
+                </div>
+                <div class="two">
+                    <h2>CONTACT</h2>
+                    <ul>
+                        <li>T: 1-634-567-34</li>
+                        <li>E: Book@Hotel.co</li>
+                        <li>F: 1-634-567-35</li>
+                    </ul>
+                </div>
+                <div class="three">
+                    <h2>HOTEL ADDRESS</h2>
+                    <ul>
+                        <li>Hotale Av.</li>
+                        <li>del Ejercito, 2, 1900</li>
+                        <li>Madrid, Spain</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomInfo">
+                <div class="left">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT</li>
+                        <li>PRIVACY POLICY</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Copyright <span>©</span> 2024 GoodLayers. <u>All Rights Reserved</u>.</p>
+                </div>
+            </div>
+        </section>
+        <!-- end footer section  -->
+    </section>
+
+    <script src="../js/roomPage.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

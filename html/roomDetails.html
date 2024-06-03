@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandNileHotel</title>
+    <!-- animation library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Jersey+15&display=swap"&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- axios cdn  -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- styling css  -->
+    <link rel="stylesheet" href="../css/roomDetailsStyle.css">
+</head>
+<body>
+    <section class="mainPage">
+        <!-- start header section -->
+        <section class="header">
+            <!-- start navbar  -->
+            <div class="navbar" >
+                <div class="logo">
+                    <img src="../img/logo2.png" alt="logoImg">
+                    <h1>Grand Hotel</h1>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">About </a></li>
+                        <li class="active"><a href="roomPage.html">Rooms</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="sign">
+                    <a class="signIn" href="#">Sign In</a>
+                    <a class="signUp" href="#">Sign Up</a>
+                </div>
+            </div>
+            <!-- end navbar  -->
+        </section>
+        <!-- end header section -->
+        <section class="details">
+            <div class="banner">
+                <h2>Room Type</h2>
+            </div>
+            <div class="room">
+                <div class="roomDetails">
+                    <img src="../img/roomDetails.jpg" alt="notFound">
+                    <div class="data">
+                        <div class="type">
+                            <h3>room type</h3>
+                            <p>room view</p>
+                        </div>
+                        <div class="price">
+                            <h3>90$ / night</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="roomDescription">
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                        </p>
+                    </div>
+                    <div class="roomFeature">
+                        <div class="div">
+                            <img src="../img/roomImg/bed.jpg" alt="notFound">
+                            <div class="desc">
+                                <h3>Bed</h3>
+                                <p>1 King Bed</p>
+                            </div>
+                        </div>
+                        <div class="div">
+                            <img src="../img/roomImg/guest.jpg" alt="notFound">
+                            <div class="desc">
+                                <h3>Max Guest</h3>
+                                <p>4 Guests</p>
+                            </div>
+                        </div>
+                        <div class="div">
+                            <img src="../img/roomImg/space.jpg" alt="notFound">
+                            <div class="desc">
+                                <h3>Room Space</h3>
+                                <p>38 sqm.</p>
+                            </div>
+                        </div>
+                        <div class="div">
+                            <img src="../img/roomImg/view.jpg" alt="notFound">
+                            <div class="desc">
+                                <h3>Room View</h3>
+                                <p>City View</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Room Amenities</h2>
+                    <div class="roomAmenities">
+                        <div class="amenity">
+                            <img src="../img/roomImg/tv.jpg" alt="notFound">
+                            <p>TV</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/wifi.jpg" alt="notFound">
+                            <p>Free Wifi</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/safe.jpg" alt="notFound">
+                            <p>Safe</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/smoking.jpg" alt="notFound">
+                            <p>None Smoking</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/airconditionar.jpg" alt="notFound">
+                            <p>Air Conditioning</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/healther.jpg" alt="notFound">
+                            <p>Heater</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/phone.jpg" alt="notFound">
+                            <p>Phone</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/dryer.jpg" alt="notFound">
+                            <p>Hair Dryer</p>
+                        </div>
+                    </div>
+                    <h2>Hotel Amenities</h2>
+                    <div class="hotelAmenities">
+                        <div class="amenity">
+                            <img src="../img/roomImg/gym.jpg" alt="notFound">
+                            <p>Gym</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/parking.jpg" alt="notFound">
+                            <p>Parking</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/spa.jpg" alt="notFound">
+                            <p>Spa</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/resturant.jpg" alt="notFound">
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/roomService.jpg" alt="notFound">
+                            <p>Room Service</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/pool.jpg" alt="notFound">
+                            <p>Swimming Pool</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/concierge.jpg" alt="notFound">
+                            <p>24 Hour Concierge</p>
+                        </div>
+                        <div class="amenity">
+                            <img src="../img/roomImg/waching.jpg" alt="notFound">
+                            <p>In-house Laundry</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="booking">
+                    <h3>Book Your Room</h3>
+                    <div class="bookingForm">
+                        <div class="checkIn">
+                            <h3>Check In</h3>
+                            <!-- <label for="myDate">May 15, 2024</label> -->
+                            <input class="dateInput" type="date" id="myDate1" min=""/>
+                        </div>
+                        <div class="checkOut">
+                            <h3>Check Out</h3>
+                            <!-- <label for="myDate">May 15, 2024</label> -->
+                            <input class="dateInput" type="date" id="myDate2" min="" />
+                        </div>
+                        <div class="roomNum">
+                            <h3>Room</h3>
+                            <p>1</p>
+                            <div class="timer">
+                                <span>Room</span>
+                                <span>
+                                    <span style="font-size: 18px;" id="minusRoom">-</span>
+                                    <span style="font-size: 18px;" id="numRoom">1</span>
+                                    <span style="font-size: 18px;" id="plusRoom">+</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="guests">
+                            <h3>Guests</h3>
+                            <div class="guestsNum">
+                                <pre class="A">  ADULTS        <span>1</span></pre>
+                                <pre class="C">  CHILDREN      <span>1</span></pre>
+                            </div>
+                            
+                            <div class="timer" style="display: block;">
+                                <div class="one">
+                                    <span>ADULTS</span>
+                                <span>
+                                    <span id="minusAdult">-</span>
+                                    <span id="numAdult">1</span>
+                                    <span id="plusAdult">+</span>
+                                </span>
+                                </div>
+                                <hr>
+                                <div class="two">
+                                    <span>CHILD</span>
+                                <span>
+                                    <span id="minusChild">-</span>
+                                    <span id="numChild">1</span>
+                                    <span id="plusChild">+</span>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button>BOOK NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="views">
+                <h3>All Room Views</h3>
+                <div class="imgs">
+                    <img src="../img/roomDetails2.jpg" alt="notFound">
+                    <img src="../img/views/view10.jpg" alt="notFound">
+                    <img src="../img/views/view11.jpg" alt="notFound">
+                    <img src="../img/views/view3.jpg" alt="notFound">
+                </div>
+            </div>
+        </section>
+        <!-- start footer section  -->
+        <section class="footer">
+            <div class="topInfo">
+                <div class="one">
+                    <h2>HOTALE</h2>
+                    <div class="cont">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <div class="payment">
+                        <img src="../img/payment.png" alt="notFound">
+                    </div>
+                </div>
+                <div class="two">
+                    <h2>CONTACT</h2>
+                    <ul>
+                        <li>T: 1-634-567-34</li>
+                        <li>E: Book@Hotel.co</li>
+                        <li>F: 1-634-567-35</li>
+                    </ul>
+                </div>
+                <div class="three">
+                    <h2>HOTEL ADDRESS</h2>
+                    <ul>
+                        <li>Hotale Av.</li>
+                        <li>del Ejercito, 2, 1900</li>
+                        <li>Madrid, Spain</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomInfo">
+                <div class="left">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT</li>
+                        <li>PRIVACY POLICY</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Copyright <span>©</span> 2024 GoodLayers. <u>All Rights Reserved</u>.</p>
+                </div>
+            </div>
+        </section>
+        <!-- end footer section  -->
+    </section>
+    <script src="../js/roomDetailsLogic.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
